@@ -1,0 +1,83 @@
+﻿@model Webbanson.Data.Product
+
+@{
+    ViewData["Title"] = "Edit Product";
+}
+
+<h1>Edit Product</h1>
+
+<form asp-action="Edit" enctype="multipart/form-data" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="ProductId" />
+
+    <div class="form-group">
+        <label asp-for="ProductName" class="control-label"></label>
+        <input asp-for="ProductName" class="form-control" />
+        <span asp-validation-for="ProductName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Description" class="control-label"></label>
+        <textarea asp-for="Description" class="form-control"></textarea>
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="StockQuantity" class="control-label"></label>
+        <input asp-for="StockQuantity" class="form-control" type="number" />
+        <span asp-validation-for="StockQuantity" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="OriginalPrice" class="control-label"></label>
+        <input asp-for="OriginalPrice" class="form-control" type="number" />
+        <span asp-validation-for="OriginalPrice" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="DiscountedPrice" class="control-label"></label>
+        <input asp-for="DiscountedPrice" class="form-control" type="number" />
+        <span asp-validation-for="DiscountedPrice" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Status" class="control-label"></label>
+        <input asp-for="Status" class="form-control" />
+        <span asp-validation-for="Status" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label class="control-label">Current Image</label><br />
+        @if (!string.IsNullOrEmpty(Model.ImageUrl))
+        {
+            <img src="~wwwroot/products/@Model.ImageUrl" alt="@Model.ProductName" style="max-width: 200px;" />
+        }
+        else
+        {
+            <span>No current image</span>
+        }
+    </div>
+    <div class="form-group">
+        <label class="control-label">New Image (optional)</label>
+        <input type="file" name="imageFile" class="form-control" accept="image/*" />
+        <span class="text-danger" data-valmsg-for="imageFile" data-valmsg-replace="true"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="CategoryId" class="control-label"></label>
+        <select asp-for="CategoryId" class="form-control" asp-items="@(ViewBag.CategoryId as SelectList)"></select>
+        <span asp-validation-for="CategoryId" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="SupplierId" class="control-label"></label>
+        <select asp-for="SupplierId" class="form-control" asp-items="@(ViewBag.SupplierId as SelectList)"></select>
+        <span asp-validation-for="SupplierId" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="BrandId" class="control-label"></label>
+        <select asp-for="BrandId" class="form-control" asp-items="@(ViewBag.BrandId as SelectList)">
+            <option value="">-- Select Brand (Optional) --</option>
+        </select>
+        <span asp-validation-for="BrandId" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Save" class="btn btn-primary" />
+    </div>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

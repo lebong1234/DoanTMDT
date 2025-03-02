@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <meta charset="utf-8">
+    <title>Rom&md - Comestics Website </title>
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=PT+Serif:wght@400;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="~/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="~/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="~/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="~/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="~/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div>
+        <!-- Spinner Start -->
+        <div id="spinner"
+             class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" role="status"></div>
+        </div>
+        <!-- Spinner End -->
+        <!-- Navbar start -->
+        <div class="container-fluid sticky-top px-0">
+            <div class="container-fluid topbar d-none d-lg-block">
+                <div class="container px-0">
+                    <div class="row align-items-center">
+                        <div class="col-lg-8">
+                            <div class="d-flex flex-wrap">
+                                <a href="#" class="me-4 text-light">
+                                    <i class="fas fa-map-marker-alt text-primary me-2"></i>Find A Location
+                                </a>
+                                <a href="#" class="me-4 text-light">
+                                    <i class="fas fa-phone-alt text-primary me-2"></i>+01234567890
+                                </a>
+                                <a href="#" class="text-light">
+                                    <i class="fas fa-envelope text-primary me-2"></i>romand@gmail.com
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="d-flex align-items-center justify-content-end">
+                                <a href="#" class="me-3 btn-square border rounded-circle nav-fill">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="me-3 btn-square border rounded-circle nav-fill">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="me-3 btn-square border rounded-circle nav-fill">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="btn-square border rounded-circle nav-fill">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid bg-light" style="height: 100px; ">
+                <div class="container px-0">
+                    <nav class="navbar navbar-light navbar-expand-xl">
+                        <a asp-controller ="Home" asp-action="Trangchu" class="navbar-brand">
+                            <h1 class="text-dark display-7">Rom&nd's</h1>
+                        </a>
+                        <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarCollapse">
+                            <span class="fa fa-bars text-primary"></span>
+                        </button>
+                        <div class="collapse navbar-collapse bg-light py-3" id="navbarCollapse">
+                            <div class="navbar-nav mx-auto border-top">
+                                <a asp-controller="Home" asp-action="Trangchu" class="nav-item nav-link active">Home</a>
+                                <a asp-controller="Home" asp-action="Sanpham" class="nav-item nav-link active">Products</a>
+                                <div class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Categories</a>
+                                    <div class="dropdown-menu m-0 bg-secondary rounded-0">
+                                        <a href="team.html" class="dropdown-item mb-3">Lipstick</a>
+                                        <a href="testimonial.html" class="dropdown-item mb-3">EyesShadow</a>
+                                        <a href="gallery.html" class="dropdown-item mb-3">Lip Balm</a>
+                                        <a href="appointment.html" class="dropdown-item mb-3">Mascara</a>
+                                        <a href="404.html" class="dropdown-item mb-3">404 page</a>
+                                    </div>
+                                </div>
+                                <a href="service.html" class="nav-item nav-link">Services</a>
+                                <a href="about.html" class="nav-item nav-link">BlogPost</a>
+                                <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+                            </div>
+                            <div class="d-flex align-items-center flex-nowrap pt-xl-0">
+                                <a class="btn-search btn btn-primary btn-primary-outline-0 rounded-circle btn-lg-square"
+                                   data-bs-toggle="modal" data-bs-target="#searchModal">
+                                    <i class="fas fa-search"></i>
+                                </a>
+                                <a class="py-3 px-4 ms-4 btn-search btn btn-primary btn-primary-outline-0 rounded-circle btn-lg-square"
+                                   asp-controller="Home" asp-action="Dangky">
+                                    <i class="fas fa-users"></i>
+                                </a>
+                                <a href="appointment.html"
+                                   class="btn btn-primary btn-primary-outline-0 rounded-pill py-3 px-4 ms-4">
+                                    Shopping
+                                    Cart
+                                </a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- Navbar End -->
+        <!-- Modal Search Start -->
+        <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header bg-dark text-white border-0">
+                        <h4 class="modal-title mb-0" id="exampleModalLabel">Search by keyword</h4>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body d-flex align-items-center justify-content-center bg-light">
+                        <div class="search-box p-4 bg-white rounded shadow-lg w-50">
+                            <div class="input-group">
+                                <input type="search" class="form-control p-3 border-0 shadow-sm" placeholder="Enter keywords..." aria-describedby="search-icon-1">
+                                <button id="search-icon-1" class="btn btn-primary px-4 py-2">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

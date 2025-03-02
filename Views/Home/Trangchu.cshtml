@@ -1,0 +1,595 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <meta charset="utf-8">
+    <title>Rom&md - Comestics Website </title>
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=PT+Serif:wght@400;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="~/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="~/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="~/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="~/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="~/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div>
+        @await Html.PartialAsync("_Header");
+
+        <main>
+            <!-- Carousel Start -->
+            <div class="container-fluid carousel-header px-0">
+                <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active"></li>
+                        <li data-bs-target="#carouselId" data-bs-slide-to="1"></li>
+                        <li data-bs-target="#carouselId" data-bs-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <img src="~/img/banner.jpg" class="img-fluid" alt="Image">
+                            <div class="carousel-caption">
+                                <div class="p-3" style="max-width: 900px;">
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <a class="btn btn-light btn-light-outline-0 rounded-pill py-3 px-5 me-4"
+                                           href="#">Member</a>
+                                        <a class="btn btn-primary btn-primary-outline-0 rounded-pill py-3 px-5" href="#">
+                                            Buy
+                                            Now
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="~/img/banner01.jpg" class="img-fluid" alt="Image">
+                            <div class="carousel-caption">
+                                <div class="p-3" style="max-width: 900px;">
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <a class="btn btn-light btn-light-outline-0 rounded-pill py-3 px-5 me-4" href="#">
+                                            Get
+                                            Start
+                                        </a>
+                                        <a class="btn btn-primary btn-primary-outline-0 rounded-pill py-3 px-5" href="#">
+                                            Book
+                                            Now
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="~/img/banner02.jpg" class="img-fluid" alt="Image">
+                            <div class="carousel-caption">
+                                <div class="p-3" style="max-width: 900px;">
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <a class="btn btn-light btn-light-outline-0 rounded-pill py-3 px-5 me-4" href="#">
+                                            Get
+                                            Start
+                                        </a>
+                                        <a class="btn btn-primary btn-primary-outline-0 rounded-pill py-3 px-5" href="#">
+                                            Book
+                                            Now
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <!-- Carousel End -->
+            <!-- Team Start -->
+            <div class="container-fluid team py-5">
+                <div class="container py-5">
+                    <div class="text-center mx-auto mb-5" style="max-width: 800px;">
+                        <p class="fs-4 text-uppercase text-primary">Best Seller</p>
+                        <h1 class="display-4 mb-4">Lipstick & Beauty Products</h1>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-md-6 col-lg-6 col-xl-3">
+                            <div class="team-item">
+                                <div class="team-img rounded-top position-relative">
+                                    <img src="img/Lipstick5.jpg" class="img-fluid w-100 rounded-top bg-light" alt="" style="height: 350px;">
+                                    <div style="position: absolute;top: 10px;left: 10px;background-color: rgb(255, 255, 255);color: rgb(227, 67, 80);font-size: 14px;font-weight: bold; padding: 5px 10px; border-radius: 8px;">
+                                        10% OFF
+                                    </div>
+                                </div>
+                                <div class="team-text rounded-bottom text-center p-4">
+                                    <p class="text-name" style="font-weight: 600;">Glasting Melting Balm #Original Series</p>
+                                    <div class="rating d-flex align-items-center justify-content-center">
+                                        <div>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                        </div>
+                                        <span class="ms-2 text-name">(120 đánh giá)</span>
+                                    </div>
+                                    <p class="mb-0 text-name">
+                                        <span style="font-size: 24px; font-weight: bold; color: #ffcc00;">$50</span>
+                                        <span style="text-decoration: line-through; color: #ccc; font-size: 16px;">$70</span>
+                                    </p>
+                                </div>
+                                <div class="team-social">
+                                    <div class="team-social d-flex flex-column align-items-center">
+                                        <label class="text-white mb-2">Chọn màu son:</label>
+                                        <button class="btn btn-square rounded-circle border mb-2"
+                                                style="width: 40px; height: 40px; background-color: #D32F2F;"
+                                                title="Màu A1"></button>
+                                        <button class="btn btn-square rounded-circle border mb-2"
+                                                style="width: 40px; height: 40px; background-color: #C2185B;"
+                                                title="Màu A2"></button>
+                                        <button class="btn btn-square rounded-circle border mb-2"
+                                                style="width: 40px; height: 40px; background-color: #7B1FA2;"
+                                                title="Màu A3"></button>
+                                        <button class="btn btn-square rounded-circle border"
+                                                style="width: 40px; height: 40px; background-color: #512DA8;"
+                                                title="Màu A4"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-6 col-lg-6 col-xl-3">
+                            <div class="team-item">
+                                <div class="team-img rounded-top position-relative">
+                                    <img src="img/Lipstick1.jpg" class="img-fluid w-100 rounded-top bg-light" alt="" style="height: 350px;">
+                                    <div style="
+                            position: absolute;
+                            top: 10px;
+                            left: 10px;
+                            background-color: rgb(255, 255, 255);
+                            color: rgb(227, 67, 80);
+                            font-size: 14px;
+                            font-weight: bold;
+                            padding: 5px 10px;
+                            border-radius: 8px;
+                        ">
+                                        10% OFF
+                                    </div>
+                                </div>
+                                <div class="team-text rounded-bottom text-center p-4">
+                                    <p class="text-name" style="font-weight: 600;">Glasting Melting Balm #Original Series</p>
+                                    <div class="rating d-flex align-items-center justify-content-center">
+                                        <div>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                        </div>
+                                        <span class="ms-2 text-name">(120 đánh giá)</span>
+                                    </div>
+                                    <p class="mb-0 text-name">
+                                        <span style="font-size: 24px; font-weight: bold; color: #ffcc00;">$50</span>
+                                        <span style="text-decoration: line-through; color: #ccc; font-size: 16px;">$70</span>
+                                    </p>
+                                </div>
+                                <div class="team-social">
+                                    <div class="team-social d-flex flex-column align-items-center">
+                                        <label class="text-white mb-2">Chọn màu son:</label>
+                                        <button class="btn btn-square rounded-circle border mb-2"
+                                                style="width: 40px; height: 40px; background-color: #D32F2F;"
+                                                title="Màu A1"></button>
+                                        <button class="btn btn-square rounded-circle border mb-2"
+                                                style="width: 40px; height: 40px; background-color: #C2185B;"
+                                                title="Màu A2"></button>
+                                        <button class="btn btn-square rounded-circle border mb-2"
+                                                style="width: 40px; height: 40px; background-color: #7B1FA2;"
+                                                title="Màu A3"></button>
+                                        <button class="btn btn-square rounded-circle border"
+                                                style="width: 40px; height: 40px; background-color: #512DA8;"
+                                                title="Màu A4"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-6 col-xl-3">
+                            <div class="team-item">
+                                <div class="team-img rounded-top position-relative">
+                                    <img src="img/Lipstick2.jpg" class="img-fluid w-100 rounded-top bg-light" alt="" style="height: 350px;">
+                                    <div style="
+                            position: absolute;
+                            top: 10px;
+                            left: 10px;
+                            background-color: rgb(255, 255, 255);
+                            color: rgb(227, 67, 80);
+                            font-size: 14px;
+                            font-weight: bold;
+                            padding: 5px 10px;
+                            border-radius: 8px;
+                        ">
+                                        10% OFF
+                                    </div>
+                                </div>
+                                <div class="team-text rounded-bottom text-center p-4">
+                                    <p class="text-name" style="font-weight: 600;">Glasting Melting Balm #Original Series</p>
+                                    <div class="rating d-flex align-items-center justify-content-center">
+                                        <div>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                        </div>
+                                        <span class="ms-2 text-name">(120 đánh giá)</span>
+                                    </div>
+                                    <p class="mb-0 text-name">
+                                        <span style="font-size: 24px; font-weight: bold; color: #ffcc00;">$50</span>
+                                        <span style="text-decoration: line-through; color: #ccc; font-size: 16px;">$70</span>
+                                    </p>
+                                </div>
+                                <div class="team-social">
+                                    <div class="team-social d-flex flex-column align-items-center">
+                                        <label class="text-white mb-2">Chọn màu son:</label>
+                                        <button class="btn btn-square rounded-circle border mb-2"
+                                                style="width: 40px; height: 40px; background-color: #D32F2F;"
+                                                title="Màu A1"></button>
+                                        <button class="btn btn-square rounded-circle border mb-2"
+                                                style="width: 40px; height: 40px; background-color: #C2185B;"
+                                                title="Màu A2"></button>
+                                        <button class="btn btn-square rounded-circle border mb-2"
+                                                style="width: 40px; height: 40px; background-color: #7B1FA2;"
+                                                title="Màu A3"></button>
+                                        <button class="btn btn-square rounded-circle border"
+                                                style="width: 40px; height: 40px; background-color: #512DA8;"
+                                                title="Màu A4"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-6 col-xl-3">
+                            <div class="team-item">
+                                <div class="team-img rounded-top position-relative">
+                                    <img src="img/Lipstick4.jpg" class="img-fluid w-100 rounded-top bg-light" alt="" style="height: 350px;">
+                                    <div style="
+                            position: absolute;
+                            top: 10px;
+                            left: 10px;
+                            background-color: rgb(255, 255, 255);
+                            color: rgb(227, 67, 80);
+                            font-size: 14px;
+                            font-weight: bold;
+                            padding: 5px 10px;
+                            border-radius: 8px;
+                        ">
+                                        10% OFF
+                                    </div>
+                                </div>
+                                <div class="team-text rounded-bottom text-center p-4">
+                                    <p class="text-name" style="font-weight: 600;">Glasting Melting Balm #Original Series</p>
+                                    <div class="rating d-flex align-items-center justify-content-center">
+                                        <div>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                        </div>
+                                        <span class="ms-2 text-name">(120 đánh giá)</span>
+                                    </div>
+                                    <p class="mb-0 text-name">
+                                        <span style="font-size: 24px; font-weight: bold; color: #ffcc00;">$50</span>
+                                        <span style="text-decoration: line-through; color: #ccc; font-size: 16px;">$70</span>
+                                    </p>
+                                </div>
+                                <div class="team-social">
+                                    <div class="team-social d-flex flex-column align-items-center">
+                                        <label class="text-white mb-2">Chọn màu son:</label>
+                                        <button class="btn btn-square rounded-circle border mb-2"
+                                                style="width: 40px; height: 40px; background-color: #D32F2F;"
+                                                title="Màu A1"></button>
+                                        <button class="btn btn-square rounded-circle border mb-2"
+                                                style="width: 40px; height: 40px; background-color: #C2185B;"
+                                                title="Màu A2"></button>
+                                        <button class="btn btn-square rounded-circle border mb-2"
+                                                style="width: 40px; height: 40px; background-color: #82044d;"
+                                                title="Màu A3"></button>
+                                        <button class="btn btn-square rounded-circle border"
+                                                style="width: 40px; height: 40px; background-color: #a10a77;"
+                                                title="Màu A4"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Review Start -->
+            <div class="container-fluid team py-5">
+                <div class="container">
+                    <div class="text-center mx-auto mb-5" style="max-width: 800px;">
+                        <p class="fs-4 text-uppercase text-primary">Review Products</p>
+                        <h1 class="display-4 mb-4">Lipstick & Beauty Products</h1>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-5 col-md-4 col-lg-3">
+                            <div class="team-item">
+                                <div class="team-img rounded-top position-relative">
+                                    <video autoplay muted loop style="width: 100%; height: 80%; border-radius: 8px;">
+                                        <source src="video/Review1.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="team-text rounded-bottom text-center p-4">
+                                    <p class="text-name" style="font-weight: 600;">Glasting Melting Balm #Original Series</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-md-4 col-lg-3">
+                            <div class="team-item">
+                                <div class="team-img rounded-top position-relative">
+                                    <video autoplay muted loop style="width: 100%; height: 80%; border-radius: 8px;">
+                                        <source src="video/Review2.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="team-text rounded-bottom text-center p-4">
+                                    <p class="text-name" style="font-weight: 600;">Glasting Melting Balm #Original Series</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3">
+                            <div class="team-item">
+                                <div class="team-img rounded-top position-relative">
+                                    <video autoplay muted loop style="width: 100%; height: 80%; border-radius: 8px;">
+                                        <source src="video/Review4.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="team-text rounded-bottom text-center p-4">
+                                    <p class="text-name" style="font-weight: 600;">Glasting Melting Balm #Original Series</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-3">
+                            <div class="team-item">
+                                <div class="team-img rounded-top position-relative">
+                                    <video autoplay muted loop style="width: 100%; height: 80%; border-radius: 8px;">
+                                        <source src="video/Review5.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                                <div class="team-text rounded-bottom text-center p-4">
+                                    <p class="text-name" style="font-weight: 600;">Glasting Melting Balm #Original Series</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid services py-5">
+                    <div class="container py-5">
+                        <div class="mx-auto text-center mb-5" style="max-width: 800px;">
+                            <p class="fs-4 text-uppercase text-center text-primary">Our Services</p>
+                            <h1 class="display-3">Hair & Beauty Treatments</h1>
+                        </div>
+                        <div class="row g-4">
+                            <div class="col-lg-6">
+                                <div class="services-item bg-light border-4 border-end border-primary rounded p-4">
+                                    <div class="row align-items-center">
+                                        <div class="col-8">
+                                            <div class="services-content text-end">
+                                                <h3>Hair Styling</h3>
+                                                <p>Professional hair styling for all occasions. Get the perfect look with our expert stylists.</p>
+                                                <a href="#" class="btn btn-primary rounded-pill py-2 px-4" style="border: 0;">Book Now</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <img src="img/Category2.png" class="img-fluid rounded" alt="Hair Styling">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="services-item bg-light border-4 border-start border-primary rounded p-4">
+                                    <div class="row align-items-center">
+                                        <div class="col-4">
+                                            <img src="img/Category4.png" class="img-fluid rounded" alt="Lipstick Application">
+                                        </div>
+                                        <div class="col-8">
+                                            <div class="services-content text-start">
+                                                <h3>Lipstick Application</h3>
+                                                <p>Get the perfect lip color and finish with our professional lipstick application service.</p>
+                                                <a href="#" class="btn btn-primary rounded-pill py-2 px-4" style="border: 0;">Book Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="services-item bg-light border-4 border-end border-primary rounded p-4">
+                                    <div class="row align-items-center">
+                                        <div class="col-8">
+                                            <div class="services-content text-end">
+                                                <h3>Makeup</h3>
+                                                <p>Full professional makeup services for any event, from natural to glamorous looks.</p>
+                                                <a href="#" class="btn btn-primary rounded-pill py-2 px-4" style="border: 0;">Book Now</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <img src="img/Category6.png" class="img-fluid rounded" alt="Makeup">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="services-item bg-light border-4 border-start border-primary rounded p-4">
+                                    <div class="row align-items-center">
+                                        <div class="col-4">
+                                            <img src="img/Category5.png" class="img-fluid rounded" alt="Mascara Application">
+                                        </div>
+                                        <div class="col-8">
+                                            <div class="services-content text-start">
+                                                <h3>Mascara Application</h3>
+                                                <p>Enhance your lashes with our premium mascara application for a stunning look.</p>
+                                                <a href="#" class="btn btn-primary rounded-pill py-2 px-4" style="border: 0;">Book Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="services-item bg-light border-4 border-end border-primary rounded p-4">
+                                    <div class="row align-items-center">
+                                        <div class="col-8">
+                                            <div class="services-content text-end">
+                                                <h3>Face Powder</h3>
+                                                <p>Achieve a flawless complexion with our professional face powder application.</p>
+                                                <a href="#" class="btn btn-primary rounded-pill py-2 px-4 " style="border: 0;">Book Now</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <img src="img/Category3.png" class="img-fluid rounded" alt="Face Powder">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="services-item bg-light border-4 border-start border-primary rounded p-4">
+                                    <div class="row align-items-center">
+                                        <div class="col-4">
+                                            <img src="img/Category1.png" class="img-fluid rounded" alt="Eye Makeup">
+                                        </div>
+                                        <div class="col-8">
+                                            <div class="services-content text-start">
+                                                <h3>Eye Makeup</h3>
+                                                <p>Enhance your eyes with our expert eye makeup services, from natural to bold looks.</p>
+                                                <a href="#" class="btn btn-primary rounded-pill py-2 px-4" style="border: 0;">Book Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="services-btn text-center">
+                                    <a href="#" class="btn btn-primary rounded-pill py-3 px-5" style="border: 0;">View More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- About Start -->
+                <div class="container-fluid about py-3">
+                    <div class="container py-5">
+                        <div class="row g-5 align-items-center">
+                            <div class="col-lg-5">
+                                <div class="video position-relative">
+                                    <video autoplay muted width="120%" height="600px"
+                                           src="video/GLASTING WATER GLOSS.mp4"
+                                           style="border-radius: 8px; cursor: pointer;"
+                                           controls>
+                                    </video>
+
+                                </div>
+                            </div>
+
+                            <div class="col-lg-7">
+                                <p class="fs-4 text-uppercase text-primary">Về chúng tôi</p>
+                                <h3 class="display-4 mb-4">Đôi nét về thương hiệu Romand</h3>
+                                <p class="mb-4">
+                                    Romand là một thương hiệu mỹ phẩm đến từ Hàn Quốc với mong muốn mang đến cho khách hàng những giá trị tuyệt vời nhất qua từng sản phẩm. Ra mắt vào năm 2017 bởi nhà sáng lập Saerom Min – một nghệ sĩ trang điểm tài năng, Romand nhanh chóng chinh phục thị trường với triết lý “Đẹp theo cách của bạn”. Thương hiệu hướng đến những cô nàng năng động, yêu thích cái đẹp và không ngại thể hiện bản thân.
+                                </p>
+                                <div class="row g-4 mb-5">
+                                    <div class="col-md-6">
+                                        <div class="d-flex align-items-center">
+                                            <i class="fab fa-gitkraken fa-3x text-primary"></i>
+                                            <div class="ms-4">
+                                                <h5 class="mb-2">Special Offers</h5>
+                                                <p class="mb-0">
+                                                    Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                    industry.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="d-flex align-items-center">
+                                            <i class="fas fa-gift fa-3x text-primary"></i>
+                                            <div class="ms-4">
+                                                <h5 class="mb-2">Special Offers</h5>
+                                                <p class="mb-0">
+                                                    Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                    industry.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn btn-primary rounded-pill py-3 px-5" style="border: 0;">View More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal Video -->
+                <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content rounded-0">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Youtube Video</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>g
+                            <div class="modal-body">
+                                <!-- 16:9 aspect ratio -->
+                                <div class="ratio ratio-16x9">
+                                    <iframe class="embed-responsive-item" src="" id="video" allowfullscreen
+                                            allowscriptaccess="always" allow="autoplay"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- About End -->
+                <!-- Appointment Start -->
+                <!-- Appointment End -->
+        </main>
+        @await Html.PartialAsync("_Footer");
+        <!-- Scripts -->
+        <script src="~/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/main.js"></script>
+        <!-- JavaScript Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/lib/wow/wow.min.js"></script>
+        <script src="~/lib/easing/easing.min.js"></script>
+        <script src="~/lib/waypoints/waypoints.min.js"></script>
+        <script src="~/lib/counterup/counterup.min.js"></script>
+        <script src="~/lib/lightbox/js/lightbox.min.js"></script>
+        <script src="~/lib/owlcarousel/owl.carousel.min.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="~/js/main.js"></script>
+    </div>
+</body>
+</html>
